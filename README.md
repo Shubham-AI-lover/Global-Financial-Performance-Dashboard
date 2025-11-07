@@ -1,2 +1,2 @@
 # Global-Financial-Performance-Dashboard
-End-to-end Power BI financial analytics dashboard showcasing KPI tracking, DuPont analysis, and revenue growth insights across 12 companies.
+Power BI financial performance dashboard analyzing profitability, ROE, liquidity, and growth trends of top 12 companies (2009–2023)
