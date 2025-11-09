@@ -156,7 +156,216 @@ Month = FORMAT([Date], "MMMM")
 
 Enables **time intelligence calculations** such as Year-over-Year Growth, Cumulative Trends, and Averages.  
 Supports **company-level performance comparison** across industries.  
-Simplifies building modular KPIs such as **ROE (DuPont), Liquidity Ratios, and Revenue Rankings.** 
+Simplifies building modular KPIs such as **ROE (DuPont), Liquidity Ratios, and Revenue Rankings.**  
+
+## Key Measures & KPIs Used  
+
+``` dax
+Total Revenue = SUM('Financial Statements'[Revenue])
+```
+``` dax
+Total Net Income = sum('Financial Statements'[Net Income])
+```
+```dax
+ROE Rank = 
+RANKX(
+    ALL(Dim_Company[Company ]),
+    CALCULATE(AVERAGE('Financial Statements'[ROE])),
+    ,
+    DESC
+)
+```
+``` dax
+Profit Margin% = DIVIDE(SUM('Financial Statements'[Net Income]), SUM('Financial Statements'[Revenue]))
+```
+``` dax
+Revenue to Equity = 
+DIVIDE(SUM('Financial Statements'[Revenue]), SUM('Financial Statements'[Share Holder Equity]))
+```
+```dax
+ROE (DuPont) = 
+[Profit Margin%] * [Revenue to Equity]
+```
+```dax
+Revenue Rank = 
+RANKX(
+    ALL(Dim_Company[Company ]),
+    CALCULATE(SUM('Financial Statements'[Revenue])),
+    ,
+    DESC
+```
+
+```dax
+Revenue Growth % = 
+VAR LatestYear =
+    MAX('Financial Statements'[Year])
+VAR CurrentRevenue =
+    CALCULATE(
+        SUM('Financial Statements'[Revenue]),
+        'Financial Statements'[Year] = LatestYear
+    )
+VAR PreviousRevenue =
+    CALCULATE(
+        SUM('Financial Statements'[Revenue]),
+        'Financial Statements'[Year] = LatestYear - 1
+    )
+RETURN
+DIVIDE(CurrentRevenue - PreviousRevenue, PreviousRevenue)
+```
+
+```dax
+Net Profit Margin% = DIVIDE([Total Net Income],[Total Revenue])
+```
+```dax
+Operating Cash Flow = SUM('Financial Statements'[Cash Flow from Operating])
+```
+```dax
+Investing Cash Flow = SUM('Financial Statements'[Cash Flow from Investing])
+```
+```dax
+Free Cash Flow Per Share = AVERAGE('Financial Statements'[Free Cash Flow per Share])
+```
+```dax
+EPS = AVERAGE('Financial Statements'[Earning Per Share])
+```
+```dax
+EBITDA Margin % = DIVIDE(SUM('Financial Statements'[EBITDA]),[Total Revenue])
+```
+```dax
+Avg Revenue Growth % = 
+AVERAGEX(
+    VALUES('Financial Statements'[Company ]),
+    [Revenue Growth %]
+)
+```
+```dax
+Average ROI = AVERAGE('Financial Statements'[ROI])
+```
+```dax
+Average ROE = AVERAGE('Financial Statements'[ROE])
+```
+```dax
+Average ROA = AVERAGE('Financial Statements'[ROA])
+```
+```dax
+Average Debt/Equity ratio = AVERAGE('Financial Statements'[Debt/Equity Ratio])
+```
+```dax
+Average Current Ratio = AVERAGE('Financial Statements'[Current Ratio])
+```
+
+```dax
+CAGR Revenue per Company = 
+VAR MinYear =
+    CALCULATE(
+        MIN('Financial Statements'[Year]),
+        ALLSELECTED('Financial Statements'),
+        VALUES('Dim_Company'[Company ])
+    )
+VAR MaxYear =
+    CALCULATE(
+        MAX('Financial Statements'[Year]),
+        ALLSELECTED('Financial Statements'),
+        VALUES('Dim_Company'[Company ])
+    )
+VAR StartRevenue =
+    CALCULATE(
+        SUM('Financial Statements'[Revenue]),
+        'Financial Statements'[Year] = MinYear
+    )
+VAR EndRevenue =
+    CALCULATE(
+        SUM('Financial Statements'[Revenue]),
+        'Financial Statements'[Year] = MaxYear
+    )
+VAR NumPeriods = MaxYear - MinYear
+RETURN
+IF(
+    NumPeriods > 0 && StartRevenue > 0,
+    (EndRevenue / StartRevenue) ^ (1 / NumPeriods) - 1,
+    BLANK()
+)
+```
+
+## 📊 Report Pages & Visualizations
+
+The report is designed as an **executive-level financial performance dashboard**, focusing on clarity, interactivity, and real-world finance insights.
+It includes **six report pages**, each highlighting a distinct aspect of corporate financial analysis.  
+
+## 📊 Page 1: Executive Summary (C-Level View)  
+
+### 🎯 Purpose  
+This dashboard provides a high-level financial overview designed for C-level executives.  
+It highlights the company’s overall revenue, profitability, leverage, and efficiency to quickly assess financial health and performance trends.  
+
+#### 📈 Key Metrics & Visuals  
+Total Revenue ($12.21M) and Total Net Income ($1.98M)  
+ROE (DuPont) – 21.47%  
+Average Debt-to-Equity Ratio – 0.65  
+Average Revenue Growth % – 1.11%  
+Total Revenue and Net Income Trend (2009–2023)  
+Revenue Ranking by Company  
+<img width="1263" height="709" alt="Executive Summary (C - Level View)" src="https://github.com/user-attachments/assets/91610309-dacd-45b6-b980-bb576e6e3bed" />  
+
+#### 💡 Business Insights  
+**Apple (AAPL)** leads in total revenue ($2.97M), followed by **Amazon (AMZN) and Microsoft (MSFT)**, showing strong sales and market dominance.  
+The **consistent upward trend** in revenue and net income until 2021 indicates steady business growth and effective financial management.  
+The **21.47% ROE** highlights effective utilization of shareholder equity in generating profits.  
+A relatively low **Debt-to-Equity ratio (0.65)** suggests that most companies are not overly reliant on debt financing — a sign of financial stability.  
+
+#### ⚠️ Drawbacks / Challenges  
+Post-2021 decline in both revenue and net income suggests possible **market saturation** or external shocks (e.g., global economic downturn).  
+**Low average revenue growth (1.11%)** signals that while profits are stable, expansion is limited.  
+Heavy dependency on a few top performers (like AAPL and AMZN) can pose portfolio concentration risks. 
+
+#### 🚀 Recommendations / Improvement Opportunities  
+Focus on **innovation and diversification** to sustain revenue growth.    
+Strengthen **cost optimization strategies** to improve profit margins amid slower growth.    
+Explore **emerging markets and product lines** to counteract stagnation in mature markets.    
+Monitor leverage strategies to ensure continued balance between growth and financial risk.   
+
+## 💰 Page 2: Profitability Analysis  
+
+### 🎯 Purpose  
+The Profitability Analysis page focuses on how efficiently each company converts revenue into profit and how well it utilizes assets and investments to generate returns.
+It enables financial analysts and decision-makers to evaluate operational efficiency, cost management, and return performance across multiple companies. 
+
+#### 📊 Key Metrics & Visuals  
+Profit Margin %: 16.18% (Overall average)  
+Average ROI: 11.88  
+Average ROA: 7.78  
+Net Profit Margin % by Company – Highlights the most and least profitable firms  
+EPS (Earnings Per Share) Trend by Year – Shows profitability per share over time  
+Company-wise Profitability Table – Displays Total Revenue, Total Net Income, and Profit Margin %  
+<img width="1292" height="712" alt="Profitiability analysis" src="https://github.com/user-attachments/assets/a0e8f0ba-1123-4d63-bca8-e13a44c31291" />  
+
+#### 💡 Business Insights  
+**Microsoft (MSFT)** leads with the highest **profit margin (28.9%)**, followed by **NVIDIA (23.26%) and Apple (22.95%)**, showcasing superior cost control and strong profit generation.    
+**Earnings Per Share (EPS)** has improved significantly since 2017, peaking at **5.7 in 2023**, indicating enhanced shareholder value.    
+**Consistent positive ROI and ROA** across top companies suggest effective asset utilization and investment strategies.    
+**Low-performing companies** like **PCG (-1.69%)** and **SHLDQ (-3.02%)** show **negative profit margins**, signaling financial distress or operational inefficiency.  
+
+#### ⚠️ Drawbacks / Challenges    
+**Uneven profitability distribution** across companies indicates that not all firms are managing costs or revenues effectively.    
+**Volatility in EPS** between 2010 and 2018 highlights periods of inconsistent earnings, possibly due to market or operational factors.    
+Some companies show **negative net income**, which can impact investor confidence and long-term sustainability.  
+
+#### 🚀 Recommendations / Improvement Opportunities  
+**Review cost structures** for underperforming companies to identify inefficiencies in operations or pricing.  
+**Diversify product portfolios** and enhance innovation to maintain high margins amid competition.  
+**Reinvest profits** into technology and productivity improvements to sustain ROI and ROA levels.  
+Implement **benchmarking and best-practice sharing** among top performers (e.g., MSFT, NVDA) to uplift weaker firms.  
+
+
+
+
+
+
+
+
+
+
+
 
 
 
