@@ -1,4 +1,6 @@
-# Global-Financial-Performance-Dashboard
+# Global-Financial-Performance-Dashboard  
+<img width="2048" height="1897" alt="LOGO" src="https://github.com/user-attachments/assets/98367bba-6580-4efd-9376-b78e5dc1eb1a" />
+
 Power BI financial performance dashboard analyzing profitability, ROE, liquidity, and growth trends of top 12 companies (2009–2023)  
 
 ## 🧭 Project Introduction
