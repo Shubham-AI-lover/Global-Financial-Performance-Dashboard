@@ -356,6 +356,160 @@ Some companies show **negative net income**, which can impact investor confidenc
 **Reinvest profits** into technology and productivity improvements to sustain ROI and ROA levels.  
 Implement **benchmarking and best-practice sharing** among top performers (e.g., MSFT, NVDA) to uplift weaker firms.  
 
+## 🏦 Page 3: Leverage & Liquidity  
+
+### 🎯 Purpose  
+The **Leverage & Liquidity** page analyzes a company’s ability to meet its short-term obligations and manage its debt effectively.  
+It helps financial decision-makers understand the **financial stability**, **capital structure**, and **cash flow strength** of each company.  
+
+#### 📊 Key Metrics & Visuals  
+**Average Current Ratio**: 2.04  
+**Average Debt-to-Equity Ratio**: 0.65  
+**Free Cash Flow per Share**: 0.19  
+**Visuals Included**:  
+**Average Current Ratio Gauge**: Compares company liquidity against target benchmark(1.75).  
+**Total Debt and Total Equity Trend by Year**: Tracks leverage levels over time.  
+**Free Cash Flow per Share by Company**: Evaluates available cash per share for reinvestment or dividends.  
+<img width="1282" height="716" alt="Leverage and Liquidity" src="https://github.com/user-attachments/assets/5ac00918-ec4c-4878-841e-09bde65075c4" />  
+
+#### 💡 Business Insights
+The **Average Current Ratio of 2.04** indicates that companies, on average, have **strong liquidity positions**, with enough current assets to cover short-term liabilities twice over.  
+The **Debt-to-Equity ratio of 0.65** suggests a **balanced capital structure**, showing companies are not overly reliant on debt financing.  
+**Barclays (BCS)** leads in **Free Cash Flow per Share (0.6)**, followed closely by **McDonald’s (MCD) and Microsoft (MSFT)** — these firms have strong operational cash flow, supporting reinvestment and dividends.  
+Companies like **Amazon (AMZN), Intel (INTC)**, and **PCG** exhibit **negative free cash flow per share**, reflecting heavy reinvestment or weak cash generation.  
+
+#### ⚠️ Drawbacks / Challenges
+A few companies show declining equity trends compared to rising debt levels after 2021, signaling potential financial strain.  
+Negative free cash flow for some firms indicates possible cash management issues or overinvestment without immediate returns.  
+Volatility in total debt over time may point to inconsistent funding strategies or changing market conditions.  
+
+#### 🚀 Recommendations / Improvement Opportunities  
+Companies with **negative cash flow** should **reassess capital expenditures** and improve working capital management.  
+Optimize debt levels to ensure sustainable growth — avoid over-leveraging during expansion phases.  
+Maintain a **current ratio above 1.5** to safeguard liquidity during downturns.  
+**Implement strong cash forecasting models** to balance liquidity and profitability efficiently.  
+
+## 📈 Page 4: DuPont Analysis
+
+### 🎯 Purpose
+The **DuPont Analysis** page breaks down the components driving **Return on Equity (ROE)** to help understand how **profitability, efficiency**, and **financial leverage** contribute to a company’s performance.  
+This view allows investors and analysts to pinpoint **which factor — margin, asset utilization, or equity management — is influencing ROE** the most.  
+
+#### 📊 Key Metrics & Visuals  
+Profit Margin: 16.18%  
+ROE (DuPont): 21.47%  
+Revenue to Equity: 1.33  
+**Visuals Included:**  
+Decomposition Tree: Shows how Profit Margin % and Revenue to Equity drive ROE using the DuPont formula.  
+Average ROE by Company: Compares the efficiency and profitability of each company’s equity utilization.  
+<img width="1281" height="710" alt="DuPont Analysis" src="https://github.com/user-attachments/assets/711f0786-f48b-4ed7-b307-2479e4941589" />  
+
+#### Business Insights  
+The average ROE of 21.47% reflects a strong return for shareholders, driven primarily by healthy profit margins and efficient use of equity.  
+Apple (AAPL) and Microsoft (MSFT) are standout performers, showing the highest ROE levels (61% and 32%), attributed to both strong profitability and efficient capital management.  
+Companies like NVDA, GOOG, and INTC maintain consistent mid-range ROEs, suggesting stable operations and controlled leverage.  
+However, McDonald’s (MCD) and PCG exhibit negative ROE, signaling either losses or excess equity utilization that fails to generate returns 
+
+#### ⚠️ Drawbacks / Challenges  
+Negative or low ROE values for some companies indicate inefficient use of shareholder funds or declining profitability.  
+Over-dependence on equity financing in some firms reduces leverage benefits, leading to lower ROE.  
+The Revenue-to-Equity ratio remains modest (1.33), suggesting that asset or capital turnover could be improved.  
+
+#### Recommendations / Improvement Opportunities
+Companies with low or negative ROE should reassess their cost structures and focus on margin improvement strategies.  
+Optimize equity utilization — balance between debt and equity to enhance shareholder returns without raising financial risk.  
+Increase asset turnover by improving operational efficiency and reducing idle capital.  
+Monitor ROE trends alongside DuPont components regularly to detect early signs of inefficiency.  
+
+## Page 5: Growth & Market Performance  
+
+### 🎯 Purpose  
+The **Growth & Market Performance** page analyzes **how effectively companies are growing their revenues over time** and how that growth translates into **shareholder returns (ROE).**
+This page helps identify which firms are **expanding sustainably** versus those struggling with **stagnation or decline**.  
+
+### 📈 Key Metrics & Visuals  
+**Revenue Growth % by Year (Line Chart):**
+Shows year-over-year revenue growth trends from 2009 to 2023, helping visualize growth cycles and downturns.  
+**CAGR Revenue per Company (Bar Chart):**  
+Highlights Compound Annual Growth Rate (CAGR) for each company, showing long-term performance strength.  
+**Revenue Growth % vs ROE (Bubble Chart):**  
+Compares growth potential (Revenue Growth %) with profitability (ROE), revealing which companies balance growth and returns most efficiently.  
+<img width="1284" height="716" alt="Growth and Market Performance" src="https://github.com/user-attachments/assets/2897deee-040b-46e3-a503-bda8a1e7d709" />  
+
+#### 💡 Business Insights  
+**Amazon (AMZN)** leads with the **highest CAGR (26.38%)**, followed by **Google (21.03%)** and **Apple (18.61%)**, showing their strong and consistent market expansion.  
+**NVIDIA (15.88%)** and **Microsoft (9.64%)** maintain moderate but stable growth trends, reflecting mature yet resilient business models.  
+**Recent revenue drop (-85.43% in 2023)** indicates **market saturation or short-term disruption**, possibly due to macroeconomic factors.  
+**Scatter plot analysis** shows that companies like **AAPL and GOOG** achieve both strong ROE and healthy revenue growth, indicating efficient capital allocation.  
+Conversely, firms such as MCD and PCG show negative or minimal growth, reflecting challenges in scaling revenue while maintaining returns.    
+
+#### ⚠️ Drawbacks / Challenges    
+Sharp revenue decline in 2023 suggests volatility and possible market or demand shocks.  
+Some companies have high ROE but low growth, implying profitability without expansion, while others show growth without adequate returns, hinting at inefficient cost management.  
+CAGR variation across firms reveals uneven sector performance and highlights the need for consistent revenue drivers. 
+
+#### 🚀 Recommendations / Improvement Opportunities  
+Focus on **sustainable revenue strategies** — diversification, innovation, and geographic expansion.  
+**Balance growth with profitability** by controlling operational costs while pursuing new markets.  
+Perform **root-cause analysis** for 2023’s drastic decline and implement corrective actions (pricing, demand forecasting, customer retention).  
+Encourage **ROE-growth balance** — reinvest profits efficiently to drive future expansion rather than over-leveraging equity.  
+
+## 🏢 Page 6: Company Deep Dive  
+
+### 🎯 Purpose    
+The **Company Deep Dive** page provides **a granular, year-by-year financial performance view** for each company, allowing executives and analysts to explore how profitability, leverage, and returns evolved over time.  
+It serves as a **detailed financial diagnostic tool**, bridging high-level KPIs with historical performance trends.  
+
+#### 📈 Key Metrics & Visuals  
+**Sum of Gross Profit, Total Revenue, and Total Net Income (KPI Cards):**  
+Summarize the company’s overall scale and profitability.  
+**Average Debt/Equity Ratio (KPI Card):**  
+Reflects the company’s financial leverage efficiency and capital structure balance.  
+**ROE (DuPont) by Year (Line Chart):**  
+Tracks how efficiently companies have generated returns from shareholders’ equity over time.  
+**Total Revenue by Year (Line Chart):**  
+Shows long-term revenue growth patterns, indicating expansion or contraction phases.  
+**otal Net Income by Year (Line Chart):**  
+Highlights profitability consistency and the effects of external or operational changes.  
+**Average Debt/Equity Ratio by Year (Line Chart):**  
+Visualizes financial risk trends, showing how companies adjust leverage strategies year to year.  
+**Detailed Financial Table:**  
+Combines all key metrics — Revenue, Net Income, Debt, Equity, Profit Margin %, ROE, ROA — for granular financial evaluation.  
+<img width="1279" height="716" alt="company deep dive" src="https://github.com/user-attachments/assets/2266e891-3b9f-48da-afc3-f94784ec5c29" />  
+
+#### 💡 Business Insights  
+**Total Revenue ($12.21M)** and **Gross Profit ($6.02M)** show a **healthy top-line growth** supported by strong operational efficiency.  
+**ROE (21.47%)** indicates **effective equity utilization**, delivering strong shareholder returns.  
+**Average Debt/Equity ratio (0.65)** signifies a **low-leverage strategy**, showing financial stability and low risk of insolvency.  
+The **upward trend in ROE (post-2017)** reflects **improved profitability and cost management.**  
+**Net income growth trend** follows revenue closely, confirming **a sustainable profit model** with limited external debt dependency.  
+
+#### ⚠️ Drawbacks / Challenges  
+**Post-2022** dip in revenue and income could indicate **market correction or operational inefficiency.**  
+Some years (e.g., 2015–2017) show **fluctuating ROE and profit margin**, suggesting **inconsistent cost control.**  
+**Dependence on equity financing** might limit potential leverage-based expansion in future growth phases.  
+
+#### 🚀 Recommendations / Improvement Opportunities  
+**Diversify revenue streams** to offset potential downturns from specific segments or regions.  
+Maintain **optimal leverage** (D/E ratio around 1.0) to maximize returns without increasing risk.  
+Focus on **cost optimization** to sustain profit margins during low-growth periods.  
+Perform **peer benchmarking** to align ROE and ROA levels with industry leaders for better performance tracking.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
