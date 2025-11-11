@@ -536,6 +536,11 @@ Identify financial risks, and
 Make better investment and strategy decisions.  
 
 
+<img width="360" height="217" alt="472434570-0ad5643f-26b7-414a-9c7b-0b84f52b6b9e" src="https://github.com/user-attachments/assets/ee65edd2-22a2-4f43-afb4-edd9466e191e" />
+
+
+
+
 
 
 
