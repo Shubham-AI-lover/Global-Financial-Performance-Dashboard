@@ -2,7 +2,7 @@
 <img width="2048" height="1897" alt="LOGO" src="https://github.com/user-attachments/assets/98367bba-6580-4efd-9376-b78e5dc1eb1a" />
 
 Power BI financial performance dashboard analyzing profitability, ROE, liquidity, and growth trends of top 12 companies (2009–2023)  
-
+### Report pages - https://app.powerbi.com/links/rr8eNv4isa?ctid=de48c0a9-b273-4256-bf3f-a462f226476a&pbi_source=linkShare&bookmarkGuid=7dd687d8-e10a-465c-bf2f-757aaca75d47
 ## 🧭 Project Introduction
 
 This project presents a **comprehensive financial analysis** of 12 global companies using Power BI.
